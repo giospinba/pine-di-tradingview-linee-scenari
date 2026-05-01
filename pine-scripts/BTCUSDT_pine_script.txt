@@ -1,0 +1,26 @@
+//@version=5
+indicator("Gann Signal", overlay=true)
+
+be = 0.025
+impulso1 = 0.001
+impulso2 = 0.002
+impulso3 = 0.003
+spike1_up = 0.0001
+spike2_low = 0.0002
+spike2_up = 0.0003
+spike3_low = 0.0004
+start_time_str = "2026-04-27T08:00:00-04:00"
+
+entry_c1 = 0.024
+entry_c2 = 0.0223
+entry_c3 = 0.02
+
+// --- CALCOLO BARRA DI INIZIO ---
+start_time = timestamp("2026-04-27T08:00:00-04:00")
+var int start_bar = na
+if time == start_time
+    start_bar := bar_index
+start_bar := na(start_bar) ? ta.valuewhen(time == start_time, bar_index, 0) : start_bar
+
+// --- DISEGNA LE LINEE ---
+// ... (continua con la logica Pine Script) ...

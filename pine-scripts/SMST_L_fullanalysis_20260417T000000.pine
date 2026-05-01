@@ -1,0 +1,30 @@
+
+//@version=5
+indicator("Gann Signal", overlay=true)
+
+be = 353.7623
+impulso1 = 8.994
+impulso2 = 26.9819
+impulso3 = 194.8691
+spike1_up = 0.0
+spike2_low = 17.9879
+spike2_up = 2.998
+spike3_low = 56.9617
+start_time_str = "2026-04-17T00:00:00-04:00"
+
+entry_c1 = 344.76829999999995
+entry_c2 = 335.7743
+entry_c3 = 200.86489999999998
+
+// --- CALCOLO BARRA DI INIZIO ---
+start_time_ts = timestamp(start_time_str)
+var int start_bar = na
+if time >= start_time_ts and na(start_bar)
+    start_bar := bar_index
+
+// --- DISEGNA LE LINEE ---
+if not na(start_bar) and bar_index >= start_bar
+    line.new(start_bar, be, bar_index, be, color=color.gray, width=1, extend=extend.right)
+    line.new(start_bar, entry_c1, bar_index, entry_c1, color=color.blue, width=2, extend=extend.right)
+    line.new(start_bar, entry_c2, bar_index, entry_c2, color=color.orange, width=2, extend=extend.right)
+    line.new(start_bar, entry_c3, bar_index, entry_c3, color=color.red, width=2, extend=extend.right)

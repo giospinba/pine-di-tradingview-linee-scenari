@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.cryptoscanner.spot</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/zsh</string>
+        <string>-lc</string>
+        <string>python3 ~/Desktop/scanner.py --market spot --phase auto --tripletta 2,3,4 --first-impulse-at 2026-04-02T04:00:00-04:00 --setup-number 5 --third-candle-close-at 2026-04-02T16:00:00-04:00 >> ~/Desktop/scanner_spot.log 2>&1</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>300</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/scanner_spot.launchd.out</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/scanner_spot.launchd.err</string>
+</dict>
+</plist>

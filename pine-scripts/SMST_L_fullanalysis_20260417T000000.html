@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMST.L Pine</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg0: #070b12;
+            --bg1: #0d1220;
+            --panel: rgba(17, 23, 35, 0.96);
+            --panel-strong: #151d2c;
+            --border: #26324a;
+            --text: #f3f7ff;
+            --muted: #9aa8bd;
+            --accent: #57e08a;
+            --accent-2: #8bd4ff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background:
+                radial-gradient(circle at top, rgba(87, 224, 138, 0.16), transparent 24%),
+                radial-gradient(circle at 85% 0%, rgba(139, 212, 255, 0.16), transparent 22%),
+                linear-gradient(180deg, var(--bg1), var(--bg0));
+            color: var(--text);
+        }
+        .wrap { max-width: 1180px; margin: 0 auto; padding: 24px; }
+        .hero {
+            margin-bottom: 14px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(87, 224, 138, .14), rgba(139, 212, 255, .12));
+            border: 1px solid rgba(139, 212, 255, .18);
+            color: #dfeaff;
+            line-height: 1.45;
+        }
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 20px;
+            box-shadow: 0 16px 50px rgba(0, 0, 0, .38);
+            backdrop-filter: blur(6px);
+        }
+        h1 { margin: 0 0 10px; font-size: clamp(24px, 3vw, 34px); line-height: 1.1; }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 18px; color: var(--muted); font-size: 14px; }
+        .pill { padding: 6px 10px; border-radius: 999px; background: #20283a; border: 1px solid #2f3b52; }
+        .details { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-bottom: 16px; }
+        .field {
+            background: var(--panel-strong);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 12px 14px;
+            min-height: 72px;
+        }
+        .field .label { color: var(--muted); font-size: 12px; display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .04em; }
+        .field .value { color: var(--text); font-weight: 700; word-break: break-word; line-height: 1.35; }
+        .field .value a { color: var(--accent-2); text-decoration: none; }
+        .field .value a:hover { text-decoration: underline; }
+        .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 16px; align-items: center; }
+        a.button, button {
+            appearance: none;
+            border: 0;
+            border-radius: 12px;
+            padding: 11px 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        a.button { background: var(--accent); color: #07130b; }
+        button { background: #2b3448; color: var(--text); }
+        textarea {
+            width: 100%;
+            min-height: 64vh;
+            resize: vertical;
+            border-radius: 16px;
+            border: 1px solid #2b3448;
+            background: #0b0f17;
+            color: #e9eef7;
+            padding: 16px;
+            line-height: 1.5;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+        .small { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; margin-top: 10px; color: var(--muted); font-size: 12px; }
+        .note { margin-top: 12px; color: #c8d2e4; font-size: 12px; line-height: 1.45; }
+        .kbd {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background: #20283a;
+            border: 1px solid #31405a;
+            border-bottom-width: 2px;
+            padding: 1px 6px;
+            border-radius: 6px;
+            color: #eff4ff;
+        }
+        @media (max-width: 640px) {
+            .wrap { padding: 14px; }
+            .card { padding: 16px; border-radius: 18px; }
+            textarea { min-height: 56vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="hero">
+            Pine e pagina HTML sono generati direttamente dal segnale. Se il file è pubblicato nel repository GitHub pubblico, il link in pagina è condivisibile.
+        </div>
+        <div class="card">
+            <h1>SMST.L - Pine pronto</h1>
+            <div class="meta">
+                <span class="pill">LSE</span>
+                <span class="pill">FULLANALYSIS</span>
+                <span class="pill">score 87.50</span>
+                <span class="pill">SHORT</span>
+            </div>
+            <div class="details">
+                <div class="field"><span class="label">Coppia</span><span class="value">SMST.L</span></div>
+                <div class="field"><span class="label">Orario setup</span><span class="value">2026-04-17T00:00:00-04:00</span></div>
+                <div class="field"><span class="label">Numero setup</span><span class="value">2</span></div>
+                <div class="field"><span class="label">Direzione</span><span class="value">SHORT</span></div>
+                <div class="field"><span class="label">TradingView</span><span class="value"><a href="https://www.tradingview.com/chart/?symbol=LSE:SMST.L" target="_blank" rel="noopener">Apri chart</a></span></div>
+                <div class="field"><span class="label">Link pubblico Pine</span><span class="value"><a href="https://raw.githubusercontent.com/cryptoscanner-lab/pine-scripts/main/SMST_L_fullanalysis_20260417T000000.pine" target="_blank" rel="noopener">Apri file pubblico</a></span></div>
+                <div class="field"><span class="label">File Pine locale</span><span class="value">SMST_L_fullanalysis_20260417T000000.pine</span></div>
+            </div>
+            <div class="actions">
+                <a class="button" href="https://www.tradingview.com/chart/?symbol=LSE:SMST.L" target="_blank" rel="noopener">Apri TradingView</a>
+                <button id="copyBtn" type="button" accesskey="c" autofocus>Copia Pine</button>
+            </div>
+            <textarea id="pine" readonly>
+//@version=5
+indicator(&quot;Gann Signal&quot;, overlay=true)
+
+be = 353.7623
+impulso1 = 8.994
+impulso2 = 26.9819
+impulso3 = 194.8691
+spike1_up = 0.0
+spike2_low = 17.9879
+spike2_up = 2.998
+spike3_low = 56.9617
+start_time_str = &quot;2026-04-17T00:00:00-04:00&quot;
+
+entry_c1 = 344.76829999999995
+entry_c2 = 335.7743
+entry_c3 = 200.86489999999998
+
+// --- CALCOLO BARRA DI INIZIO ---
+start_time_ts = timestamp(start_time_str)
+var int start_bar = na
+if time &gt;= start_time_ts and na(start_bar)
+    start_bar := bar_index
+
+// --- DISEGNA LE LINEE ---
+if not na(start_bar) and bar_index &gt;= start_bar
+    line.new(start_bar, be, bar_index, be, color=color.gray, width=1, extend=extend.right)
+    line.new(start_bar, entry_c1, bar_index, entry_c1, color=color.blue, width=2, extend=extend.right)
+    line.new(start_bar, entry_c2, bar_index, entry_c2, color=color.orange, width=2, extend=extend.right)
+    line.new(start_bar, entry_c3, bar_index, entry_c3, color=color.red, width=2, extend=extend.right)
+</textarea>
+            <div class="small">
+                <span>Scorciatoia: <span class="kbd">Alt</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></span>
+                <span>HTML: SMST_L_fullanalysis_20260417T000000.html</span>
+            </div>
+            <div class="note">Nota: il link pubblico funziona solo se questi file sono davvero esposti in un repository GitHub pubblico. In locale resta pronto, ma non è accessibile dall'esterno.</div>
+        </div>
+    </div>
+    <script>
+        const pineField = document.getElementById('pine');
+        const copyButton = document.getElementById('copyBtn');
+        const copyPine = async () => {
+            pineField.focus();
+            pineField.select();
+            pineField.setSelectionRange(0, pineField.value.length);
+            try {
+                await navigator.clipboard.writeText(pineField.value);
+            } catch (error) {
+                document.execCommand('copy');
+            }
+        };
+        copyButton.addEventListener('click', copyPine);
+        document.addEventListener('keydown', (event) => {
+            if ((event.altKey || event.metaKey || event.ctrlKey) && event.shiftKey && event.key.toLowerCase() === 'c') {
+                event.preventDefault();
+                copyPine();
+            }
+        });
+    </script>
+</body>
+</html>
