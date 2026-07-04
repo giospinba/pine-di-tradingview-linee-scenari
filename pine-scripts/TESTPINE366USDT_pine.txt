@@ -1,0 +1,19 @@
+
+//@version=5
+indicator("Gann Signal TESTPINE366USDT", overlay=true)
+// Parametri
+be = 29.7189
+impulso1 = 1.7072
+impulso2 = 0.9092
+impulso3 = 1.7077
+spike1_up = 0.4253
+spike2_low = 0.11
+spike2_up = 0.2013
+spike3_low = 0.205
+start_time = timestamp("2026-07-04T13:51:27.611932+00:00")
+
+// Logica esempio
+plot(be, color=color.green, linewidth=2, title="Break Even")
+plot(be + impulso1, color=color.blue, linewidth=1, title="Impulso 1")
+plot(be + impulso2, color=color.orange, linewidth=1, title="Impulso 2")
+plot(be + impulso3, color=color.red, linewidth=1, title="Impulso 3")
