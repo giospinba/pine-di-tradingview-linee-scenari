@@ -1,0 +1,19 @@
+
+//@version=5
+indicator("Gann Signal RPL_USD", overlay=true)
+// Parametri
+be = 2.335
+impulso1 = 0.125
+impulso2 = 0.18999999999999995
+impulso3 = 0.4560000000000002
+spike1_up = 0.008000000000000007
+spike2_low = 0.0
+spike2_up = 0.028000000000000025
+spike3_low = 0.0
+start_time = timestamp("2026-07-04T04:00:00-04:00")
+
+// Logica esempio
+plot(be, color=color.green, linewidth=2, title="Break Even")
+plot(be + impulso1, color=color.blue, linewidth=1, title="Impulso 1")
+plot(be + impulso2, color=color.orange, linewidth=1, title="Impulso 2")
+plot(be + impulso3, color=color.red, linewidth=1, title="Impulso 3")
